@@ -28,7 +28,7 @@ class Snake():
   def move(self,world,keypresses = None):
     # print(self.body)
     food_pos = world.food_pos
-    self.direction = self.AI.move(world,keypresses = keypresses)
+    self.direction = self.AI.move(self,world,keypresses = keypresses)
     self.last_pos = self.tail
     self.head += self.dir2vec[self.direction]
     for vec in self.body:

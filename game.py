@@ -3,7 +3,7 @@ from snake import *
 from world import *
 from time import sleep
 from manualAI import *
-
+from AI_1 import AI
 init()
 clock = time.Clock()
 h = 600
@@ -14,7 +14,7 @@ gameDisplay = display.set_mode((h,w))
 crashed = False
 
 world = World(gameDisplay,n = 50)
-snake = Snake(np.array([20,25]),manualAI())
+snake = Snake(np.array([20,25]),AI())
 
 while not crashed:
   keypresses = []
